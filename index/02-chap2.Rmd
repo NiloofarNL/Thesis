@@ -1,0 +1,402 @@
+<!-- # Mathematics and Science {#math-sci} -->
+
+<!-- <!-- Required to number equations in HTML files --> -->
+<!-- <script type="text/x-mathjax-config"> -->
+<!-- MathJax.Hub.Config({ -->
+<!--   TeX: { equationNumbers: { autoNumber: "AMS" } } -->
+<!-- }); -->
+<!-- </script> -->
+
+<!-- ## Math -->
+
+<!-- \TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read LaTeX code directly. -->
+
+<!-- If you are doing a thesis that will involve lots of math, you will want to read the following section which has been commented out. If you're not going to use math, skip over or delete this next commented section. -->
+
+
+<!-- <!-- MATH and PHYSICS majors: Uncomment the following section --> -->
+<!-- $$ -->
+<!-- \sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}} -->
+<!-- \left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2 -->
+<!-- $$ -->
+
+<!-- From Informational Dynamics, we have the following (Dave Braden): -->
+<!--
+
+After _n_ such encounters the posterior density for $\theta$ is
+
+$$
+\pi(\theta|X_1< y_1,\dots,X_n<y_n) \varpropto \pi(\theta) \prod_{i=1}^n\int_{-\infty}^{y_i}
+   \exp\left(-{(x-\theta)^2\over{2\sigma^2}}\right)\ dx
+$$
+
+Another equation:
+
+$$
+\det\left|\,\begin{matrix}%
+c_0&c_1\hfill&c_2\hfill&\ldots&c_n\hfill\cr
+c_1&c_2\hfill&c_3\hfill&\ldots&c_{n+1}\hfill\cr
+c_2&c_3\hfill&c_4\hfill&\ldots&c_{n+2}\hfill\cr
+\,\vdots\hfill&\,\vdots\hfill&
+  \,\vdots\hfill&&\,\vdots\hfill\cr
+c_n&c_{n+1}\hfill&c_{n+2}\hfill&\ldots&c_{2n}\hfill\cr
+\end{matrix}\right|>0
+$$
+
+
+Lapidus and Pindar, Numerical Solution of Partial Differential Equations in Science and
+Engineering.  Page 54
+
+$$
+\int_t\left\{\sum_{j=1}^3 T_j \left({d\phi_j\over dt}+k\phi_j\right)-kT_e\right\}w_i(t)\ dt=0,
+   \qquad\quad i=1,2,3.
+$$
+
+L\&P  Galerkin method weighting functions.  Page 55
+
+$$
+\sum_{j=1}^3 T_j\int_0^1\left\{{d\phi_j\over dt} + k\phi_j\right\} \phi_i\ dt
+   = \int_{0}^1k\,T_e\phi_idt, \qquad i=1,2,3 
+$$
+
+Another L\&P (p145)
+
+$$
+\int_{-1}^1\!\int_{-1}^1\!\int_{-1}^1 f\big(\xi,\eta,\zeta\big)
+   = \sum_{k=1}^n\sum_{j=1}^n\sum_{i=1}^n w_i w_j w_k f\big( \xi,\eta,\zeta\big).
+$$
+
+Another L\&P (p126)
+
+$$
+\int_{A_e} (\,\cdot\,) dx dy = \int_{-1}^1\!\int_{-1}^1 (\,\cdot\,) \det[J] d\xi d\eta.
+$$
+
+\begin{equation}
+  \mathrm{C_6H_{12}O_6  + 6O_2} \longrightarrow \mathrm{6CO_2 + 6H_2O}
+  (\#eq:reaction)
+\end{equation}
+
+We can reference this combustion of glucose reaction via Equation \@ref(eq:reaction).
+
+### Other examples of reactions
+
+$\mathrm{NH_4Cl_{(s)}}$ $\rightleftharpoons$ $\mathrm{NH_{3(g)}+HCl_{(g)}}$
+
+\noindent $\mathrm{MeCH_2Br + Mg}$ $\xrightarrow[below]{above}$ $\mathrm{MeCH_2\bullet Mg \bullet Br}$
+
+-->
+
+<!-- ## Physics -->
+
+<!-- Many of the symbols you will need can be found on the math page <https://web.reed.edu/cis/help/latex/math.html> and the Comprehensive LaTeX Symbol Guide (<https://mirror.utexas.edu/ctan/info/symbols/comprehensive/symbols-letter.pdf>). -->
+
+<!-- ## Biology -->
+
+<!-- You will probably find the resources at <https://www.lecb.ncifcrf.gov/~toms/latex.html> helpful, particularly the links to bsts for various journals. You may also be interested in TeXShade for nucleotide typesetting (<https://homepages.uni-tuebingen.de/beitz/txe.html>).  Be sure to read the proceeding chapter on graphics and tables. -->
+
+<!--
+# Is your commute like a bad boss? Learned helplessness and normalization of stress in the commute experience in Santiago
+-->
+
+# Introduction
+
+Purpose of travel: Travel essentially could have an advantage which can be different from reaching a destination or for achieving a goal. This phenomenon would be interpreted as an indirect travel in which travel has an independent entity from the activity. Moreover, people may undertake excess travel even combined with mandatory trips and do not try to make it reasonable in accordance with the target of travel. Other psychological aspects like the enjoying and relaxing may have an important role from their viewpoint (Mokhtarian and Salomon, 2000). 
+
+Less stress, instrumental- oriented trip: According to people’s target of travel, people will assign importance on two types of psychological motives namely as instrumental (environment, cost, health and fitness, convenience, predictability, flexibility) and affective (Relaxation, no stress, excitement, control, freedom). For instance, if they are traveling for a leisure time, they expect more freedom, convenience and low level of stress. For work trips, while active modes’ users were satisfied with these motives almost equally, users of motorised modes are satisfied with instrumental factors with higher rate than affective factors. For these kinds of users, convenience and flexibility may outweigh affective factors such as stress (Anable and Gatersleben, 2005). This can be a kind of normalization because people try to adjust what they are struggling with and focus on other related dimensions to the problem. But there is a question: Should they do this in only life-threading conditions, or it works also in non-life-threading conditions? In previous it mentioned that if people use normalization in non-life-threading condition it may impair the level of their quality of life.
+
+Stress of commute: As previous studies have shown commuting experience may be accompanied by work-related stressors (Koslowsky, 1997).  Interestingly, People are different in their sensitivity and vulnerability to stressful events (Shamoa-Nir and Koslowky, 2010). At high risk of experiencing stress, people are in danger of feeling psychological problems and sleep disturbance. Individuals who perceived themselves as physically weak had higher rates of mental health problems. This would be an apparent sign of the importance that people would assign to conditions in which they feel psychological problems leading to lose their self-esteem, face with self doubt and feel stress. The unremitting stress could trigger psychological issues of anxiety, fear, panic attacks, posttraumatic stress symptoms, psychological distress, stigma, avoidance of contact, depressive tendencies, sleep disturbances, helplessness and interpersonal social isolation depending on their profession. In some cases, the correlation between psychological resilience level and the perceived stress level is turned out to be reverse in a way that they may feel more resilient to the psychological effects like stress and they perceive less stress level. It can be seen in some positions Fear of labeling, stigmatization and discrimination potentially impede workers intent to seek counselling and psychotherapeutic interventions. Despite the common mental health problems and psychosocial issues among workers in such settings, most of them do not often seek or receive a systematic mental health care. 
+
+Coping strategies: According to a theory based on Lazarus and his colleagues, stress is perceived as a relationship between an individual and the environment relevant to its wellbeing in which they have positive or negative evaluation. Having this feeling, cognitive appraisal has two parts: first a person can decide whether the encounter is irrelevant, benign-positive or stressful. In second part the person will measure coping resources and alternatives, try to address his/her question about what they should do in this situation. These parts work interdependently in a way that if coping strategies are considered as enough resources, the threat of the event will diminish and vice versa. 
+
+Emotions are of importance as people interpret their perceptions toward what is going on in an environment. As a diagnostic tool, emotions are vital because their intensity and quality determine how people organize the feeling of importance to them and this has a direct relation with their evaluation of a happening. 
+
+In general, coping strategies has two majors namely as cognitive and behavioral besides a broad range of functions to handle a problematic situation between a person and an environment. First major is centered around the control of agitating emotions which is more practical when the encounter is unchangeable from a person’s perception (emotion-based coping). Some kinds of emotion-based coping strategies are identified as diminishing threat, seeking emotional or social support, wishful thinking and self-blame. The second one seeks to improve the annoying situation by doing an act (problem-based coping). In contrast, problem-based coping strategies are more popular when the encounter is changeable.  In the following paragraphs eight scales of these strategies will be identified by their own characteristics.
+
+Wishful thinking is a way that focuses on how a person is dealing with the problem by thinking about changing the situation or tackle with that like maintaining a normal life, thinking about solutions, maintaining situational control and information seeking. Distancing as the second one refers to trying to forget the whole matter and waiting for what will happen next. Emphasizing the positive would be the third one focusing on considering the bright side of things like using a positive altitude while addressing the issue. Items four to six contain self-blame (criticizing myself), tension-reduction (trying to make a better feeling by doing favorite behaviors and self-isolation (avoidance of contact with others as the negative copying style and related to high levels of stress. All the others are associated with lower levels). Seventh item is a mix of both problem and emotion-based coping entitled “Seeking social support” covers sympathetic feelings and talking to someone else in order to making the situation easier to understand. This is the one used typically by people more than choosing one form or the other one (Folkman and Lazarus, 1985). Apart from classification, another kind of emotion-based strategies implies adaptive coping strategies including religion and social support (Babore et. al, 2020). 
+
+The Last item as a salient statement of problem-based coping strategies would be “adhere to a plan of actions” (Folkman and Lazarus, 1985). Depending on the strategies which people take into account for coping with mobility stress, vulnerability can be indicated. Mobility stress could be a situation in which people are unable to use comfortable means of mobility. Vulnerability means a living situation which is detrimental to psychological condition of people. Regarding this people may adopt strategies such as: travel by non-motorised means, readiness to high fare, cancellation of trips, travel in company of relatives, reduced number of trips, purchase of private automobile (Odufuwa, B. O, 2008).  Another coping strategy would be time allowing the individual to control stressors related to time components. Similarly, increasing control or predictability may be influential in this regard. If the commuter can be informed of special situations that exist on the way to work, such as traffic accidents or a closed road, both perception of control and predictability could be enhanced. Interestingly, with the aid of radio station in the morning (in many communities today special radio frequences in the morning and evening report on traffic patterns and even make recommendations on alternative routes) the expected negative effects of commuting can be mitigated. For example, flexitime, telecommuting, and subsidised carpooling are techniques for making the commute easier (Koslowsky, 1997). 
+
+The objective of this research is to investigate whether normalization/learned helplessness could be coping strategies, and if so for whom. Data for the research are drawn from a survey conducted in Santiago, Chile, based on a quota-sampling method based on the information from Pre-Census of 2012, and in total, 451 persons validly completed the survey.
+
+The rest of the paper is structured as follows…
+
+# Background
+
+## Stress and transportation
+
+Generally, stress include a wide variety of factors and there is no single identifier broadly accepted. One of these would be stress caused by commuting. People with any target of travel may face stress while commuting between origins and destinations. Although a broad range of source of stress are identified as commuting stress, they can be primarily classified as two categories of objective stressors and subjective moderators.
+
+ The first group indicates objectives as impedance like commuting time, distance or speed as a combination of time and distance, and commuting condition such as traffic congestion. Previous studies reveal that length of travel and congestion are strongly related to the increase of stress. People feel less stress when they experience a movement with less possible amount of time and distance. (The concept of commute impedance was specified as a behavioral control on movement or reaching a target. In other words, it contains anything that impose frustration on the goal to be reached at a certain time at a particular place such as distance, slow speed or traffic congestion. Speed would not have direct effect as an impedance, but some other extraneous factors may split from that. To make a clarification on that we can assume two drivers first driving at 35 mile/hour and second driving at 50 mile/hour. The former one may be driving on local roads, at maximum possible speed and without experiencing any barrier while the former one may be driving on a highway, face congestion (on superhighways like German autobahn) and find negative stimuli on the road (Koslowsky, 1997).
+ 
+Second cluster contains subjective variables like perception of control over the commute (commuting mode), predictability of commuting conditions and personal characteristics namely as gender or family specifications.  
+While there is no evidence indicating effect of subjective factors, some studies have considered active modes like driving a car or riding a bike which provide more control, are more associated with less stress that passive modes like public transport. On the contrary, another study hypothesize that car users are more at the exposure of stress than bus or train users. Given these, there might be a possibility of other factors like noise or congestion to have effect on perceived stress by different modes of transportation.
+
+As a kind of moderator, predictability of commuting has a significant role in perceived stress on commuting. Commuters capable of predicting the length of travel may face less commuting stress than their counter parts who are uncertain about this. Also, the relation of variability of commute and higher level of commuting stress is evident. 
+
+Also, there are other factors can be considered to show the effect of stress on commuting such as assessment of commuting time, alcohol consumption, leisure-time activities, and job attributes (Gottholmsender et. Al, 2009)
+
+## Coping with stress: Normalization and learned helplessness
+
+The concept of normalization was mostly developed in nursing research on families with chronically ill children. Normalization consists of reducing the feeling of being different and achieving as normal a life as possible,  acknowledging the existence of the impairment (which distinguishes it from denial), using a normalcy lens to define the situation, constructing a story of life as normal and going on to enact it, and carrying on with life activities as if the illness can be ignored.
+
+People at high risk of experiencing stress like health workers are in danger of feeling psychological problems and sleep disturbance. By using some scales for instance resilience scale and perceived stress scale including Likert scale, through a survey we can figure out to what extent people can tolerate stressful conditions and what is their exact perception of this feeling. It has been stated that individuals who perceived themselves as physically weak had higher rates of mental health problems. This would be an apparent sign of the importance that people would assign to conditions in which they feel psychological problems leading to lose their self-esteem, face with self doubt and feel stress.
+
+It has been concluded from previous studies that people regarding their profession might be at high risk of anxiety, stress, and depression. The severity is causing further mental health problems which not only effect workers’ decision-making ability but could also have long term detrimental effect on their overall well-being. The risk of a sudden change in their roles like being downgraded can lead to psychological problems, such as disappointment, helplessness, adaptation problems, and fear of change. It seems people due to helplessness may use some coping strategies such as leaving the stressful situation and asking social support. When individuals feel they are in an uncontrolled situation they are more likely to revert to avoidance-focused coping strategy. Those victims who could not deal with these toxic conditions nor leave may feel learned helplessness and chronic health issues in long term harm (Webster, Brough and Daly, 2014). Normalize stress in some situations due to individuals’ specific conditions may prevent them to deal with the main stressors. Similarly, people who are under high stress environment – emotional and behavioral responses are naturally adaptive in the face of extreme (unpredictable and uncertain) stress, and thus counselling and psychotherapy based on the stress-adaptation model might act as early and prompt intervention (Rana, Mukhtar and Mukhtar, 2020). This feeling of helplessness might have origins in uncontrollable factors and people assume their behaviour and outcomes are independent and this learning produces the motivational, cognitive and emotional effect of uncontrollability. Learned helplessness will be shown as a defective performance where reduced incentive motivation is undermined (Maier and Seligman, 1976).
+
+When individuals are in a situation in which they suffer from a (physical) problem, depending on to what extent they have internalized the norms and principles, they might be distressed by unexpected and uncontrollable barriers to its fulfillment. In such conditions, normalization seems to play a significant role by trying to achieve higher levels of quality of life and better adjustment. But in fact, normalization is weakly related to quality of life. Normalization in long-term impairs quality of life mainly due to its social consequences. On the one hand, normalization in other non-life-threatening chronic or long-term conditions that are known to impair quality of life of young adults as they struggle to attain the developmental milestones reached by their own peers. On the other hand, Normalization includes a focus on other goals in life, instead of or in addition to those that are currently blocked. For example, by adjusting another related goal following failed treatment we can mitigate its effect on. Nevertheless, people can choose to (re)engage in other goals at the same time. Engaging in alternative meaningful goals has been found to be adaptive for people undergoing serious physical problems, with its effects seen mainly in terms of greater well-being. Normalization, in the sense of maintaining life routines and balancing between the physical and other life domains, allows for such goal re-engagement.
+
+## Stress and coping strategies in transportation
+
+The inevitable role of human being in the general chain of traffic issues is taken into consideration as it leads to stress, accident and aberrant behaviours. Haigney. D and Westerman. S.J (2000) have revealed that there would be two predominant classification of Driver Behaviour Inventory (DBI) assessing driver stress and Driver Behaviour Questionnaire (DBQ) investigating aberrant driver behaviour. 
+
+Unsatisfying traffic conditions may aggravate the situation and increase frustration on the road leading to high level of stress. Some people would underestimate the risk of confrontation with an accident and tend to overrate their capabilities while driving. While this high level of confidence in vehicle control decreases driver stress level, it would lead people to adopt dangerous attitudes and driving maneuvers requiring specific skills. (beneficial level of stress because it can mediate risk of stress. Stress is generally bad when it is excessive.)
+
+The Driver Behaviour Inventory as a measure of driver stress indicates driver stress and performance as a function of evaluating traffic demands, appraising personal competence and selecting coping strategies. According to recent studies of DBI, three main aspects of driver stress vulnerability has been emerged namely as: 
+
+•	Aggression (i.e., anger, impatience and risk taking which can be addressed through confrontive coping strategies)
+
+•	Dislike of driving (i.e., anxiety, self-blame and lack of confidence tackled by self-criticism coping strategies or negative emotions that diverts attention from the driving task)
+
+•	Alertness (i.e., awareness of risk and active search for road hazards issued by task-focus (problem solving) coping strategies.
+
+*According to a study conducted by Kontogiannis (2006), the direct relationship between aggression and self-criticism has been found and reveals aggressive drivers could be aware of their behaviour but they cannot take preventive actions. These findings would be beneficial for traffic safety organization looking for reducing aggression on the roads.
+
+According to DBI, there would be two additional categories of driver stress as irritation when overtaken and frustration when overtaking, has been suggested. It seems that these overtaking factors in comparison to the former factors are more predominant on aggression. Following this, two new “situation-specific” factors in a five-factor solution were identified. “Situation-specific” tension associated with aggression and included two overtaking factors while “situation-specific” concentration correlated with alertness but consisted of only two items. Furthermore, confidence factor was recognized based on an extensive questionnaire including a new confidence factor related to control perception. An interesting relation exits between confidence and violation (aberrant behaviour: leading to accident and caused by stress) as people with high record of violations felt more confident about vehicle control. (Which is maybe related to the relation among, underrate risk of accident, overrate driving skills, high level of confidence, high possibility of undertaking driving maneuvers). [Finally, new factors of “fatigue” and “thrill seeking” have been revealing followed by an administration of a questionnaire. Studies within the context of real-world behaviour, have revealed high aggression related to faster driving and more risky overtaking. While dislike scale was associated with weaker vehicle control. An interesting study has found men reported higher aggression and comparatively lower overtaking tension. The relations between age and driver stress have indicated older drivers experienced less stress and be more alert (Haigney. D and Westerman. S.J, 2000).]
+
+Coping strategies: In stressful traffic situation, individuals should select appropriate actions to cope with stress. As mentioned before, two general categories of coping strategies have been identified: problem-based and emotion-based. 
+
+Problem-focused followers tend to adopt tasks and rational strategies such as: 
+
+o	Information seeking
+o	Taking precaution and making plan: Making an action to drive in a safe way such as avoid making risky overtaking and changing route when it is necessary in an appropriate time
+o	Confrontive coping: Expressing feelings through risk taking like driving close to next car’s bumper, beeping, flash light beams on other drivers. 
+On the contrary, emotion-based drivers appear to regulate emotions and decrease discomfort by different ways such as:
+o	(Escape avoidance) Avoidance: Trying to supress negative feelings to overcome the problem
+o	Wishful thinking
+o	Reappraisal: Considering driving as a learning experience such as trying oneself to calm down and emphasizing the positive point
+o	Self-criticism: Criticizing oneself for mistakes such as feeling failure and self-doubt
+The adherence of these two broad coping strategies has been recognized diverse and related to individuals’ preferences. 
+Furthermore, studies about chronic stress (DBI scale) and coping behaviours has led to a consistent relationship between them. First dimension implies that drivers revealing anger, frustration and impatience (like aggression scale) were more likely to tackle stress through confrontive coping. Second would be drivers feeling anxiety and fear (like dislike of driving scale) were more interested in opting negative emotional coping styles deviating attention from driving action. Alertness as last dimension and an attribute of active hazard surveillance seems to be addressed by a problem-solving coping strategy. Alertness anticipated speed of discrimination of roadside pedestrians.
+To improve the distinction of problem-focused versus emotion-focused coping skills, it is vital to define specific road scenarios and observe how drivers respond to them rather than considering general form of driving which is not enlightening (like slow-driving: someone is driving in front of you making overtaking hard, and discourtesy scenarios: someone is driving behind you near to your rear bumper beeping because . In addition, diversity and socio-cultural backgrounds around the world would affect factor structure of driver stress and its correlation to coping styles.
+Previous researches have shown that professional drivers chose a group of both problem-based and emotion-based strategies. This selection may change regarding the level of frustration and anger felt in various road scenarios (Kontogiannis, 2006).
+
+# Materials and methods
+
+## Data preparation
+
+Collect the data on the two ordinal variables of interest and check for any missing data or outliers. If necessary, clean the data and recode it into ordinal categories.
+
+-The case study for this research covered the Santiago Metropolitan as Chile’s capital and largest city containing various communes as shown in the figure. 1. The dataset used in current study obtained from a paper-based survey conducted face-to-face in Santiago in 2016. The data set contains essential socio-economic and demographic information about the respondents, as well as their built environment and behaviors commuting to work. In addition, the survey (conducted between DATE-DATE, 2016) includes information about the respondents’ feelings and emotions in relation to their commuting experience, the social experience of a variety of transportation modes, various self-assessed health questions, patterns of use of information and telecommunication technologies, and questions about sustainability and the environment. The data collection conducted a quota-sampling method based on the information from Pre-Census of 2012, and in total, 451 persons validly completed the survey. This study considers the first two parts of the survey including individual characteristic and health information to figure out the relationship between personal attributes and stress related variables. 
+
+```{r}
+library(ggplot2)
+library(ggspatial)
+library(sf)
+comunas_1 <- read_sf('C:/Users/nalaeen/Desktop/Master-Research/bSantiago/data-raw/comunas_1')
+ggplot() +
+  annotation_map_tile() +
+  geom_sf(data = comunas_1,
+          linewidth = 1,
+          fill = NA)
+```
+
+## Variables
+
+As mentioned earlier in the study, previous researches have applied various variables for implementing the ordinal regression model. In this study we employ a group of dependent and independent variables extracted from individual characteristics and health information parts of the surveys. As dependent variables we chose stress indicator of level of stress experienced by respondents while commuting and another stress criterion revealing the importance level of the stress experienced when traveling by participants. For independent variables we selected respondents age and income level, occupation, and their primary mode of transportation while regular commuting. 
+
+To initialize our bivariate ordinal model, we took advantage of previous studies about the how was the importance of different independent variables withing individual characteristics.
+
+Although gender looked affective on some of driver stress scales like confidence and alertness, it was rather weak to indicate gender difference in terms of coping strategies. Previous studies revealed men feel more confidence and alert that their counter parts. Regarding coping strategies, women seemed to score higher in cognitive strategies despite men who tend to use behavioral strategies. (Kontogiannis, 2006). Although it has been found that women were more likely to feel stress and anxiety that men, some studies has shown that women and men in a rather similar conditions felt the same level of stress (Hill and Ng Boyle, 2007).
+
+Age sounded influential on most of aspects of driver stress vulnerability. Getting older had a positive role in a way that it increased cognitive coping strategies useful in decreasing stress level and declined negative behaviors like aggression (Kontogiannis, 2006), thus they felt less stress. Another study indicated the relation of age with stress in a completely different way as some situation-specific tensions tend to increase by getting old until some of older ones may decide to not to drive (Hill and Ng Boyle, 2007). Age also could be negatively related to manifestation of violation and dangerous behaviors as old drivers tend to decrease the speed due to the declining cognitive capabilities (Westerman and Haigney, 2000). 
+
+In contrast of old people, youth were more likely to reveal their driving anger through behavioral coping strategies. (Hill and Ng Boyle, 2007). 
+
+Based on findings of previous research on determinants of individual’s vulnerability to mobility stress, level of education and family status would be influential on the experienced stress while commuting. Also, high level of income would provide people with the opportunity of purchasing a private vehicle limiting their driving stress and uncomfortable experience with public means (Odufuwa, 2008).
+
+
+```{r summary of desctiptive statistics }
+library(bSantiago)
+library(vtable)
+df <- Santiago_H |>
+  left_join(Santiago_IC,
+            by = "ID") |>
+  as.data.frame() |>
+  drop_na(r0D_AGE,
+          r0J_INCOME,
+          r0G_EDUCATION,
+          r0P_MODE1,
+          r0H_OCCUPATION ) 
+
+
+data(df)
+st(df, vars = c('r1A_STRESS','r1GA_IMPSTRESS', 'r0D_AGE', 'r0J_INCOME', 'r0P_MODE1', 'r0G_EDUCATION', 'r0H_OCCUPATION'))
+
+sumtable(df,
+         summ=c('Min(x)',
+                'Max(x)',
+                'Mode(x)'))
+
+st(df, group = NA , group.long = TRUE, out='return')
+
+```
+
+In order to reach the more efficient model we used recode_factor() argument which requires the dplyr R package to be loaded, and the function takes the original factor variable as the first argument, followed by the recoding rules. The recoding rules in this study are specified using a set of named character vectors to aggregate or disperse the original levels of the factor and the values represent the new levels.
+
+```{r resetting the outcomes of each variable to see the efficient result}
+
+df <- Santiago_H |>
+  left_join(Santiago_IC,
+            by = "ID") |>
+  as.data.frame() |>
+  drop_na(r0D_AGE,
+          r0J_INCOME,
+          r0G_EDUCATION,
+          r0P_MODE1,
+          r0H_OCCUPATION ) 
+  
+
+df <- df %>%  mutate(r0J_INCOME = recode_factor(r0J_INCOME,
+                                  "Less423" = "Low Income",
+                                  "423to639" = "Low Income",
+                                  "639to977" = "Middle Income",
+                                  "977to1550" = "Middle Income",
+                                  "1550to2380" = "High Income",
+                                  "2380more" = "High Income"))  %>%
+  # mutate(r0D_AGE = recode_factor(r0D_AGE,
+  #                                 "Less18" = "Youth and Children",
+  #                                 "18to24" = "Youth and Children",
+  #                                 "25to34" = "Youth and Children",
+  #                                 "35to54" = "Adults",
+  #                                 "55to64" = "Adults",
+  #                                 "65more" = "Adults"))  %>%
+    mutate(r0D_AGE = recode_factor(r0D_AGE,
+                                  "Less18" = "Youth",
+                                  "18to24" = "Youth",
+                                  "25to34" = "Youth",
+                                  "35to54" = "Adults",
+                                  "55to64" = "Seniors",
+                                  "65more" = "Seniors"))  %>%
+  mutate(r0P_MODE1 = recode_factor(r0P_MODE1,
+                                  "CAR" = "Private Transportation",
+                                  "MOTO" = "Private Transportation",
+                                  "TAXI" = "Public Transportation",
+                                  "COLECTIVO" = "Public Transportation",
+                                  "METRO" = "Public Transportation",
+                                  "BUS" = "Public Transportation",
+                                  "BICYCLE" = "Active Transportation",
+                                  "WALK" = "Active Transportation")) %>%
+  # mutate(r0P_MODE1 = recode_factor(r0P_MODE1,
+  #                                 "CAR" = "Motorized Transportation",
+  #                                 "MOTO" = "Motorized Transportation",
+  #                                 "TAXI" = "Motorized Transportation",
+  #                                 "COLECTIVO" = "Motorized Transportation",
+  #                                 "METRO" = "Motorized Transportation",
+  #                                 "BUS" = "Motorized Transportation",
+  #                                 "BICYCLE" = "Active Transportation",
+  #                                 "WALK" = "Active Transportation")) %>%
+  # mutate(r0G_EDUCATION = recode_factor(r0G_EDUCATION,
+  #                                 "ELEMENTARY" = "Elementary Education",
+  #                                 "SECUNDARY" = "Middle Education",
+  #                                 "PROFESS_TECH" = "Middle Education",
+  #                                 "COLLEGE" = "Middle Education",
+  #                                 "POSTGRAD" = "Higher Education"))
+mutate(r0G_EDUCATION = recode_factor(r0G_EDUCATION,
+                                  "ELEMENTARY" = "Elementary Education",
+                                  "SECUNDARY" = "Higher Education",
+                                  "COLLEGE" = "Higher Education",
+                                  "PROFESS_TECH" = "Higher Education",
+                                  "POSTGRAD" = "Higher Education"))  %>%
+  
+mutate(r0H_OCCUPATION = recode_factor(r0H_OCCUPATION,
+                                  "FULL_TIME" = "Working",
+                                  "PART_TIME" = "Working",
+                                  "SELF_EMPLOYED" = "Working",
+                                  "UNEMPLOYED" = "Not Working",
+                                  "HOME_TAKER" = "Not Working",
+                                  "STUDENT" = "Student",
+                                  "STUDENT_WORK" = "Working",
+                                  "RETIRED" = "Not Working",
+                                  "OTHER" = "Non Professional"))
+
+   # df$r0C_SEX <- relevel(df$r0C_SEX, ref = "MAN")
+   df$r0P_MODE1 <- relevel(df$r0P_MODE1, ref = "Active Transportation")
+   df$r0D_AGE <- relevel(df$r0D_AGE, ref = "Youth")
+   df$r0J_INCOME <- relevel(df$r0J_INCOME, ref = "Low Income")
+   df$r0G_EDUCATION <- relevel(df$r0G_EDUCATION, ref = "Elementary Education")
+   df$r0M_DISABILITY <- relevel(df$r0M_DISABILITY, ref = "YES")
+   df$r0H_OCCUPATION <- relevel(df$r0H_OCCUPATION, ref = "Not Working")
+  
+ 
+```
+
+
+## Modelling approach
+
+One of the most common analysis of ordinal data would be related to modeling the preferences or opinions in various fields. In this regard we can see the application of modelling in correlated ordinal data as multiple outcomes for a number of subjects or objects like participants responding to a questionnaire. Given these multivariate setting, models and particularly multivariate ordinal regression models sound practical to deal with the correlation among ordinal outcomes. Current study has used similar application of multivariate ordinal regression models ( Kenne Pagui and Canale 2016) considering the gap between expected satisfaction and experienced service. It refers to two different blocks that participants are asked to say to what extent the service has importance and as the second part they are required to reveal the actual feeling about the given service. 
+
+As can be seen in the study conducted by (Hirk, Hornik, and Vana 2020b) the class of multivariate ordinal regression models implemented in mvord and can be applied to other applications such as having multiple or repeated ordinal observations. This research takes advantage of package mvord for R Studio which provides a flexible framework for analysing correlated ordinal data using the class of multivariate ordinal regression models. This class of modeling assumes each ordinal response as a categorized version of an underlying continuous latent variable separated based on specific threshold parameters. This flexible framework contributes helps to imposing constraint on thresholds along with regression coefficients using … arguments.  
+
+In this study we implement multivariate logit link for the class of multivariate ordinal regression models. In terms of identifiability, imposing some restriction on the parameters is needed as the absolute scale and location are not identifiable in ordinal models. Therefore, in order to make the model identifiable, we use one of the options regarding constraining parameter set by the following way:
+
+Fixing the intercept βj0 (e.g., to zero), using flexible thresholds θj and fixing σij (e.g., to unity) ∀j ∈ Ji, ∀i ∈ {1, . . . , n}.
+
+# Analysis and results
+
+In order to fit our multivariate ordinal regression model, we can use mvord R package which has two different data structures of MMO and MMO2. As we are working with wide data format and the covariates stored in different columns of the data set do not change during multiple measurements, using MMO2 data structure is an appropriate way. In this data structure each subject i refers to on row of the data frame and all the covariates are stored in different columns.
+
+At this point we used the following formula to specify the model: 
+
+mod_bivariate <- mvord(formula = MMO2(r1A_STRESS,r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  , 
+                       link = mvlogit(df = 8L)
+
+where "mod_bivariate" is the name of the model, "mvord" is the function for fitting multivariate ordinal models, and "MMO2" is the data structure in accordance with wide format of data set. Predicators are demographic variables of the respondents namely as their age, income, education and occupation level as well as their primary mode of commute.
+
+
+```{r}
+library(mvord)
+mod_bivariate <- mvord(formula = MMO2(r1A_STRESS, r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  ,
+                       link = mvlogit(df = 8L),
+                       # {mvord} does not like tbl or tbl_df objects:
+                       # convert to plain data.frame
+                       data = df)
+summary(mod_bivariate)
+
+```
+
+
+As the second step to make sure of the model identifiability and reveal the latent correlation in the model, we used an argument to constrain the coefficients.
+
+```{r}
+formula <- MMO2(r1A_STRESS, r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  
+names_constraints(formula, data = df)
+coef.constraints = cbind(c(NA, 1), # Adults
+                         c(1, NA), # Seniors
+                         c(1, 2), # Middle Income
+                         c(1, NA), # High Income
+                         c(1, NA), # Private Transportation
+                         c(1, NA), # Public Transportation
+                         c(NA, 1), # Higher Education
+                         c(1, NA), # Working
+                         c(1, NA), # Student
+                         c(NA, NA)) #Non Professional
+
+mod_bivariate <- mvord(formula = MMO2(r1A_STRESS, r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  ,
+                       link = mvlogit(df = 8L),
+                       coef.constraints = coef.constraints,
+                       # {mvord} does not like tbl or tbl_df objects:
+                       # convert to plain data.frame
+                       data = df)
+summary(mod_bivariate)
+
+
+```
+
+# Discussion
+
+Words go here.
+
+# Conclusion
+
+Words go here.
