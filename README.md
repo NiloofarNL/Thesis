@@ -1,7 +1,3 @@
----
-title: "Untitled"
-output: github_document
----
 
 # Is your commute like a bad boss? Learned helplessness and normalization of stress in the commute experience in Santiago
 
