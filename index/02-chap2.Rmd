@@ -108,6 +108,15 @@ Previous researches have shown that professional drivers chose a group of both p
 
 # Materials and methods
 
+<!-- Source of questionnaire is needed to be explained  -->
+The presented data in this article were gathered purposefully through a questionnaire to capture various dimensions of urban living and mobility in a major city in the Global South. The questionnaire covers different topics such as personal characteristics, work-related travel information, and perceptions of the built environment. Other themes include social interactions while using different modes of transportation, mode switching, and the use of information technologies. The questionnaire also addresses several self-reported health outcomes, feelings and emotions related to commuting experiences, attitudes toward transportation system satisfaction, and perceptions of nature and sustainability.
+
+This study focuses on both demographic and health-related information. To assess participants' views on stress during their commute, multiple questions were asked, including variable r1A_STRESS as one of our dependent variables, which reflects the level of stress experienced during regular trips using a 5-point Likert scale (very low, low, moderate, high, and very high). Its corresponding variable, r1GA_IMPSTRESS as the other one of our dependent variables, evaluates the importance of stress during commuting and is also assessed using a 5-point Likert scale (not important, slightly important, moderately important, important, and very important).
+
+Furthermore, health information can be useful in understanding the effects of transportation policy decisions on public health. Identifying the specific factors that contribute to stressful modes of transportation can help transportation and public health experts make commuting a safer, more enjoyable, and less stressful experience.
+
+ 
+
 ## Data preparation
 
 Collect the data on the two ordinal variables of interest and check for any missing data or outliers. If necessary, clean the data and recode it into ordinal categories.
