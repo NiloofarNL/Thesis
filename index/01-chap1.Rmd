@@ -39,7 +39,7 @@ data("Santiago_SI")
 data("Santiago_TW")
 ```
 
-# Abstract
+# Introduction
 
 Large-scale travel surveys are invaluable sources of information to understand travel behavior and other aspects of the urban experience, such as residential context. By their nature, they often shy away from overloading respondents with additional questions. The data presented in this article result from an effort to purposefully collect data on various aspects of the experience of living and moving in a major city in the Global South. The data set contains essential socio-economic and demographic information about the respondents, as well as their built environment and behaviors commuting to work. In addition, the survey (conducted between DATE-DATE, 2016) includes information about the respondents' feelings and emotions in relation to their commuting experience, the social experience of a variety of transportation modes, various self-assessed health questions, patterns of use of information and telecommunication technologies, and questions about sustainability and the environment. The survey was adopted a quota-sampling method that used the Pre-Census of 2012 as a frame, and in total includes 451 validated questionnaires.
 
