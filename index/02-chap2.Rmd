@@ -8,7 +8,7 @@ output:
 # Is your commute like a bad boss? Learned helplessness and normalization of stress in the commute experience in Santiago
 -->
 
-```{r}
+```{r echo=FALSE, include = FALSE}
 update.packages(ask = FALSE, checkBuilt = TRUE)
 install.packages("htmltools")
 library(htmltools)
@@ -23,7 +23,7 @@ detach("package:htmltools", unload = TRUE)
 
 ```
 
-```{r load-packages, echo=FALSE, warning=FALSE, message=FALSE}
+```{r , echo=FALSE, warning=FALSE, message=FALSE, include = FALSE}
 #Load packages:
 library(ggthemes)
 library(kableExtra)
@@ -41,40 +41,45 @@ library(ggspatial)
 library(sf)
 library(shadowtext)
 library(ggmosaic)
+library(pollster)
+library(dplyr)
+library(ggplot2)
+library(janitor)
+library(gt)
 # install.packages("devtools")
-devtools::install_github("haleyjeppson/ggmosaic")
-remotes::install_github("haleyjeppson/ggmosaic")
+# devtools::install_github("haleyjeppson/ggmosaic")
+# remotes::install_github("haleyjeppson/ggmosaic")
 
-install.packages('htmltools')
-
-packageVersion("htmltools")
-
-
-install.packages("htmltools", update = TRUE)
+# install.packages('htmltools')
+# 
+# packageVersion("htmltools")
+# 
+# 
+# install.packages("htmltools", update = TRUE)
 ```
 
-```{r}
-install.packages("htmltools")
-remotes::install_github("rstudio/htmltools")
+```{r echo=FALSE, include = FALSE}
+# install.packages("htmltools")
+# remotes::install_github("rstudio/htmltools")
 
 
 ```
-```{r}
-install.packages("ggmosaic", dependencies = TRUE, repos = "http://cran.us.r-project.org")
-library(ggmosaic)
+```{r echo=FALSE, include = FALSE}
+# install.packages("ggmosaic", dependencies = TRUE, repos = "http://cran.us.r-project.org")
+# library(ggmosaic)
 
 ```
 
 
 
-```{r}
+```{r echo=FALSE, include = FALSE}
 comunas_1 <- read_sf('C:/Users/nalaeen/Desktop/Master-Research/bSantiago/data-raw/comunas_1')
 ```
 # Introduction
 
 Travel essentially could have an advantage which can be different from reaching a destination or for achieving a goal. This phenomenon would be interpreted as an indirect travel in which travel has an independent entity from the activity. Moreover, people may undertake excess travel even combined with mandatory trips and do not try to make it reasonable in accordance with the target of travel. Other psychological aspects like the joy and relaxation may have an important role from their viewpoint [@mokhtarian2001derived].
 
-According to people’s target of travel, people will assign importance on two types of psychological motives namely as instrumental (environment, cost, health and fitness, convenience, predictability, flexibility) and affective (Relaxation, no stress, excitement, control, freedom). For instance, if they are traveling for a leisure time, they expect more freedom, convenience and low level of stress. For work trips, while active modes’ users were satisfied with these motives almost equally, users of motorised modes are satisfied with instrumental factors with higher rate than affective factors. For these kinds of users, convenience and flexibility may outweigh affective factors such as stress as previous study has shown [@anable2005all]. This can be a kind of normalization because people try to adjust what they are struggling with and focus on other related dimensions to the problem. But there is a question: Should they do this in only life-threading conditions, or it works also in non-life-threading conditions? Previous work has shown that if people use normalization in non-life-threading condition it may impair the level of their quality of life.
+According to people???s target of travel, people will assign importance on two types of psychological motives namely as instrumental (environment, cost, health and fitness, convenience, predictability, flexibility) and affective (Relaxation, no stress, excitement, control, freedom). For instance, if they are traveling for a leisure time, they expect more freedom, convenience and low level of stress. For work trips, while active modes??? users were satisfied with these motives almost equally, users of motorised modes are satisfied with instrumental factors with higher rate than affective factors. For these kinds of users, convenience and flexibility may outweigh affective factors such as stress as previous study has shown [@anable2005all]. This can be a kind of normalization because people try to adjust what they are struggling with and focus on other related dimensions to the problem. But there is a question: Should they do this in only life-threading conditions, or it works also in non-life-threading conditions? Previous work has shown that if people use normalization in non-life-threading condition it may impair the level of their quality of life.
 
 As earlier studies have shown commuting experience may be accompanied by work-related stressors [@koslowsky1997commuting]. Interestingly, People are different in their sensitivity and vulnerability to stressful events [@shamoa2010aggression]. At high risk of experiencing stress, people are in danger of feeling psychological problems and sleep disturbance. Individuals who perceived themselves as physically weak had higher rates of mental health problems. This would be an apparent sign of the importance that people would assign to conditions in which they feel psychological problems leading to lose their self-esteem, face with self doubt and feel stress. The unremitting stress could trigger psychological issues of anxiety, fear, panic attacks, posttraumatic stress symptoms, psychological distress, stigma, avoidance of contact, depressive tendencies, sleep disturbances, helplessness and interpersonal social isolation depending on their profession. In some cases, the correlation between psychological resilience level and the perceived stress level is turned out to be reverse in a way that they may feel more resilient to the psychological effects like stress and they perceive less stress level. It can be seen in some positions Fear of labeling, stigmatization and discrimination potentially impede workers intent to seek counselling and psychotherapeutic interventions. Despite the common mental health problems and psychosocial issues among workers in such settings, most of them do not often seek or receive a systematic mental health care. 
 
@@ -82,15 +87,15 @@ According to a theory based on Lazarus and his colleagues, stress is perceived a
 
 Emotions are of importance as people interpret their perceptions toward what is going on in an environment. As a diagnostic tool, emotions are vital because their intensity and quality determine how people organize the feeling of importance to them and this has a direct relation with their evaluation of a happening. 
 
-In general, coping strategies has two majors namely as cognitive and behavioral besides a broad range of functions to handle a problematic situation between a person and an environment. First major is centered around the control of agitating emotions which is more practical when the encounter is unchangeable from a person’s perception (emotion-based coping). Some kinds of emotion-based coping strategies are identified as diminishing threat, seeking emotional or social support, wishful thinking and self-blame. The second one seeks to improve the annoying situation by doing an act (problem-based coping). In contrast, problem-based coping strategies are more popular when the encounter is changeable.  In the following paragraphs eight scales of these strategies will be identified by their own characteristics.
+In general, coping strategies has two majors namely as cognitive and behavioral besides a broad range of functions to handle a problematic situation between a person and an environment. First major is centered around the control of agitating emotions which is more practical when the encounter is unchangeable from a person???s perception (emotion-based coping). Some kinds of emotion-based coping strategies are identified as diminishing threat, seeking emotional or social support, wishful thinking and self-blame. The second one seeks to improve the annoying situation by doing an act (problem-based coping). In contrast, problem-based coping strategies are more popular when the encounter is changeable.  In the following paragraphs eight scales of these strategies will be identified by their own characteristics.
 
-Wishful thinking is a way that focuses on how a person is dealing with the problem by thinking about changing the situation or tackle with that like maintaining a normal life, thinking about solutions, maintaining situational control and information seeking. Distancing as the second one refers to trying to forget the whole matter and waiting for what will happen next. Emphasizing the positive would be the third one focusing on considering the bright side of things like using a positive altitude while addressing the issue. Items four to six contain self-blame (criticizing myself), tension-reduction (trying to make a better feeling by doing favorite behaviors and self-isolation (avoidance of contact with others as the negative copying style and related to high levels of stress. All the others are associated with lower levels). Seventh item is a mix of both problem and emotion-based coping entitled “Seeking social support” covers sympathetic feelings and talking to someone else in order to making the situation easier to understand. This is the one used typically by people more than choosing one form or the other one [@folkman1985if]. Apart from classification, another kind of emotion-based strategies implies adaptive coping strategies including religion and social support [@babore2020psychological]. 
+Wishful thinking is a way that focuses on how a person is dealing with the problem by thinking about changing the situation or tackle with that like maintaining a normal life, thinking about solutions, maintaining situational control and information seeking. Distancing as the second one refers to trying to forget the whole matter and waiting for what will happen next. Emphasizing the positive would be the third one focusing on considering the bright side of things like using a positive altitude while addressing the issue. Items four to six contain self-blame (criticizing myself), tension-reduction (trying to make a better feeling by doing favorite behaviors and self-isolation (avoidance of contact with others as the negative copying style and related to high levels of stress. All the others are associated with lower levels). Seventh item is a mix of both problem and emotion-based coping entitled ???Seeking social support??? covers sympathetic feelings and talking to someone else in order to making the situation easier to understand. This is the one used typically by people more than choosing one form or the other one [@folkman1985if]. Apart from classification, another kind of emotion-based strategies implies adaptive coping strategies including religion and social support [@babore2020psychological]. 
 
-The Last item as a salient statement of problem-based coping strategies would be “adhere to a plan of actions” [@folkman1985if]. Depending on the strategies which people take into account for coping with mobility stress, vulnerability can be indicated. Mobility stress could be a situation in which people are unable to use comfortable means of mobility. Vulnerability means a living situation which is detrimental to psychological condition of people. Regarding this people may adopt strategies such as: travel by non-motorised means, readiness to high fare, cancellation of trips, travel in company of relatives, reduced number of trips, purchase of private automobile [@odufuwa2008gender].  Another coping strategy would be time allowing the individual to control stressors related to time components. Similarly, increasing control or predictability may be influential in this regard. If the commuter can be informed of special situations that exist on the way to work, such as traffic accidents or a closed road, both perception of control and predictability could be enhanced. Interestingly, with the aid of radio station in the morning (in many communities today special radio frequences in the morning and evening report on traffic patterns and even make recommendations on alternative routes) the expected negative effects of commuting can be mitigated. For example, flexitime, telecommuting, and subsidised carpooling are techniques for making the commute easier [@koslowsky1997commuting]. 
+The Last item as a salient statement of problem-based coping strategies would be ???adhere to a plan of actions??? [@folkman1985if]. Depending on the strategies which people take into account for coping with mobility stress, vulnerability can be indicated. Mobility stress could be a situation in which people are unable to use comfortable means of mobility. Vulnerability means a living situation which is detrimental to psychological condition of people. Regarding this people may adopt strategies such as: travel by non-motorised means, readiness to high fare, cancellation of trips, travel in company of relatives, reduced number of trips, purchase of private automobile [@odufuwa2008gender].  Another coping strategy would be time allowing the individual to control stressors related to time components. Similarly, increasing control or predictability may be influential in this regard. If the commuter can be informed of special situations that exist on the way to work, such as traffic accidents or a closed road, both perception of control and predictability could be enhanced. Interestingly, with the aid of radio station in the morning (in many communities today special radio frequences in the morning and evening report on traffic patterns and even make recommendations on alternative routes) the expected negative effects of commuting can be mitigated. For example, flexitime, telecommuting, and subsidised carpooling are techniques for making the commute easier [@koslowsky1997commuting]. 
 
 The objective of this research is to investigate whether normalization/learned helplessness could be coping strategies, and if so for whom. Data for the research are drawn from a survey conducted in Santiago, Chile, based on a quota-sampling method based on the information from Pre-Census of 2012, and in total, 451 persons validly completed the survey.
 
-The rest of the paper is structured as follows…
+The rest of the paper is structured as follows???
 
 # Background
 
@@ -113,7 +118,7 @@ The concept of normalization was mostly developed in nursing research on familie
 
 People at high risk of experiencing stress like health workers are in danger of feeling psychological problems and sleep disturbance. By using some scales for instance resilience scale and perceived stress scale including Likert scale, through a survey we can figure out to what extent people can tolerate stressful conditions and what is their exact perception of this feeling. It has been stated that individuals who perceived themselves as physically weak had higher rates of mental health problems. This would be an apparent sign of the importance that people would assign to conditions in which they feel psychological problems leading to lose their self-esteem, face with self doubt and feel stress.
 
-It has been concluded from previous studies that people regarding their profession might be at high risk of anxiety, stress, and depression. The severity is causing further mental health problems which not only effect workers’ decision-making ability but could also have long term detrimental effect on their overall well-being. The risk of a sudden change in their roles like being downgraded can lead to psychological problems, such as disappointment, helplessness, adaptation problems, and fear of change. It seems people due to helplessness may use some coping strategies such as leaving the stressful situation and asking social support. When individuals feel they are in an uncontrolled situation they are more likely to revert to avoidance-focused coping strategy. Those victims who could not deal with these toxic conditions nor leave may feel learned helplessness and chronic health issues in long term harm [@webster2016fight]. Normalize stress in some situations due to individuals’ specific conditions may prevent them to deal with the main stressors. Similarly, people who are under high stress environment – emotional and behavioral responses are naturally adaptive in the face of extreme (unpredictable and uncertain) stress, and thus counselling and psychotherapy based on the stress-adaptation model might act as early and prompt intervention [@rana2020mental]. This feeling of helplessness might have origins in uncontrollable factors and people assume their behaviour and outcomes are independent and this learning produces the motivational, cognitive and emotional effect of uncontrollability. Learned helplessness will be shown as a defective performance where reduced incentive motivation is undermined [@maier1976learned].
+It has been concluded from previous studies that people regarding their profession might be at high risk of anxiety, stress, and depression. The severity is causing further mental health problems which not only effect workers??? decision-making ability but could also have long term detrimental effect on their overall well-being. The risk of a sudden change in their roles like being downgraded can lead to psychological problems, such as disappointment, helplessness, adaptation problems, and fear of change. It seems people due to helplessness may use some coping strategies such as leaving the stressful situation and asking social support. When individuals feel they are in an uncontrolled situation they are more likely to revert to avoidance-focused coping strategy. Those victims who could not deal with these toxic conditions nor leave may feel learned helplessness and chronic health issues in long term harm [@webster2016fight]. Normalize stress in some situations due to individuals??? specific conditions may prevent them to deal with the main stressors. Similarly, people who are under high stress environment ??? emotional and behavioral responses are naturally adaptive in the face of extreme (unpredictable and uncertain) stress, and thus counselling and psychotherapy based on the stress-adaptation model might act as early and prompt intervention [@rana2020mental]. This feeling of helplessness might have origins in uncontrollable factors and people assume their behaviour and outcomes are independent and this learning produces the motivational, cognitive and emotional effect of uncontrollability. Learned helplessness will be shown as a defective performance where reduced incentive motivation is undermined [@maier1976learned].
 
 When individuals are in a situation in which they suffer from a (physical) problem, depending on to what extent they have internalized the norms and principles, they might be distressed by unexpected and uncontrollable barriers to its fulfillment. In such conditions, normalization seems to play a significant role by trying to achieve higher levels of quality of life and better adjustment. But in fact, normalization is weakly related to quality of life. Normalization in long-term impairs quality of life mainly due to its social consequences. On the one hand, normalization in other non-life-threatening chronic or long-term conditions that are known to impair quality of life of young adults as they struggle to attain the developmental milestones reached by their own peers. On the other hand, Normalization includes a focus on other goals in life, instead of or in addition to those that are currently blocked. For example, by adjusting another related goal following failed treatment we can mitigate its effect on. Nevertheless, people can choose to (re)engage in other goals at the same time. Engaging in alternative meaningful goals has been found to be adaptive for people undergoing serious physical problems, with its effects seen mainly in terms of greater well-being. Normalization, in the sense of maintaining life routines and balancing between the physical and other life domains, allows for such goal re-engagement.
 
@@ -125,15 +130,15 @@ Unsatisfying traffic conditions may aggravate the situation and increase frustra
 
 The Driver Behaviour Inventory as a measure of driver stress indicates driver stress and performance as a function of evaluating traffic demands, appraising personal competence and selecting coping strategies. According to recent studies of DBI, three main aspects of driver stress vulnerability has been emerged namely as: 
 
-•	Aggression (i.e., anger, impatience and risk taking which can be addressed through confrontive coping strategies)
+???	Aggression (i.e., anger, impatience and risk taking which can be addressed through confrontive coping strategies)
 
-•	Dislike of driving (i.e., anxiety, self-blame and lack of confidence tackled by self-criticism coping strategies or negative emotions that diverts attention from the driving task)
+???	Dislike of driving (i.e., anxiety, self-blame and lack of confidence tackled by self-criticism coping strategies or negative emotions that diverts attention from the driving task)
 
-•	Alertness (i.e., awareness of risk and active search for road hazards issued by task-focus (problem solving) coping strategies.
+???	Alertness (i.e., awareness of risk and active search for road hazards issued by task-focus (problem solving) coping strategies.
 
 *According to a study conducted by [@kontogiannis2006patterns], the direct relationship between aggression and self-criticism has been found and reveals aggressive drivers could be aware of their behaviour but they cannot take preventive actions. These findings would be beneficial for traffic safety organization looking for reducing aggression on the roads.
 
-According to DBI, there would be two additional categories of driver stress as irritation when overtaken and frustration when overtaking, has been suggested. It seems that these overtaking factors in comparison to the former factors are more predominant on aggression. Following this, two new “situation-specific” factors in a five-factor solution were identified. “Situation-specific” tension associated with aggression and included two overtaking factors while “situation-specific” concentration correlated with alertness but consisted of only two items. Furthermore, confidence factor was recognized based on an extensive questionnaire including a new confidence factor related to control perception. An interesting relation exits between confidence and violation (aberrant behaviour: leading to accident and caused by stress) as people with high record of violations felt more confident about vehicle control. (Which is maybe related to the relation among, underrate risk of accident, overrate driving skills, high level of confidence, high possibility of undertaking driving maneuvers). [Finally, new factors of “fatigue” and “thrill seeking” have been revealing followed by an administration of a questionnaire. Studies within the context of real-world behaviour, have revealed high aggression related to faster driving and more risky overtaking. While dislike scale was associated with weaker vehicle control. An interesting study has found men reported higher aggression and comparatively lower overtaking tension. The relations between age and driver stress have indicated older drivers due to declining trend of cognitive capacities experienced high stress and were less alert  [@westerman2000individual].
+According to DBI, there would be two additional categories of driver stress as irritation when overtaken and frustration when overtaking, has been suggested. It seems that these overtaking factors in comparison to the former factors are more predominant on aggression. Following this, two new ???situation-specific??? factors in a five-factor solution were identified. ???Situation-specific??? tension associated with aggression and included two overtaking factors while ???situation-specific??? concentration correlated with alertness but consisted of only two items. Furthermore, confidence factor was recognized based on an extensive questionnaire including a new confidence factor related to control perception. An interesting relation exits between confidence and violation (aberrant behaviour: leading to accident and caused by stress) as people with high record of violations felt more confident about vehicle control. (Which is maybe related to the relation among, underrate risk of accident, overrate driving skills, high level of confidence, high possibility of undertaking driving maneuvers). [Finally, new factors of ???fatigue??? and ???thrill seeking??? have been revealing followed by an administration of a questionnaire. Studies within the context of real-world behaviour, have revealed high aggression related to faster driving and more risky overtaking. While dislike scale was associated with weaker vehicle control. An interesting study has found men reported higher aggression and comparatively lower overtaking tension. The relations between age and driver stress have indicated older drivers due to declining trend of cognitive capacities experienced high stress and were less alert  [@westerman2000individual].
 
 Coping strategies: In stressful traffic situation, individuals should select appropriate actions to cope with stress. As mentioned before, two general categories of coping strategies have been identified: problem-based and emotion-based. 
 
@@ -141,13 +146,13 @@ Problem-focused followers tend to adopt tasks and rational strategies such as:
 
 o	Information seeking
 o	Taking precaution and making plan: Making an action to drive in a safe way such as avoid making risky overtaking and changing route when it is necessary in an appropriate time
-o	Confrontive coping: Expressing feelings through risk taking like driving close to next car’s bumper, beeping, flash light beams on other drivers. 
+o	Confrontive coping: Expressing feelings through risk taking like driving close to next car???s bumper, beeping, flash light beams on other drivers. 
 On the contrary, emotion-based drivers appear to regulate emotions and decrease discomfort by different ways such as:
 o	(Escape avoidance) Avoidance: Trying to supress negative feelings to overcome the problem
 o	Wishful thinking
 o	Reappraisal: Considering driving as a learning experience such as trying oneself to calm down and emphasizing the positive point
 o	Self-criticism: Criticizing oneself for mistakes such as feeling failure and self-doubt
-The adherence of these two broad coping strategies has been recognized diverse and related to individuals’ preferences. 
+The adherence of these two broad coping strategies has been recognized diverse and related to individuals??? preferences. 
 Furthermore, studies about chronic stress (DBI scale) and coping behaviours has led to a consistent relationship between them. First dimension implies that drivers revealing anger, frustration and impatience (like aggression scale) were more likely to tackle stress through confrontive coping. Second would be drivers feeling anxiety and fear (like dislike of driving scale) were more interested in opting negative emotional coping styles deviating attention from driving action. Alertness as last dimension and an attribute of active hazard surveillance seems to be addressed by a problem-solving coping strategy. Alertness anticipated speed of discrimination of roadside pedestrians.
 To improve the distinction of problem-focused versus emotion-focused coping skills, it is vital to define specific road scenarios and observe how drivers respond to them rather than considering general form of driving which is not enlightening (like slow-driving: someone is driving in front of you making overtaking hard, and discourtesy scenarios: someone is driving behind you near to your rear bumper beeping because . In addition, diversity and socio-cultural backgrounds around the world would affect factor structure of driver stress and its correlation to coping styles.
 Previous researches have shown that professional drivers chose a group of both problem-based and emotion-based strategies. This selection may change regarding the level of frustration and anger felt in various road scenarios [@kontogiannis2006patterns].
@@ -167,9 +172,9 @@ Furthermore, health information can be useful in understanding the effects of tr
 
 Collect the data on the two ordinal variables of interest and check for any missing data or outliers. If necessary, clean the data and recode it into ordinal categories.
 
--The case study for this research covered the Santiago Metropolitan as Chile’s capital and largest city containing various communes as shown in the figure. 1. The dataset used in current study obtained from a paper-based survey conducted face-to-face in Santiago in 2016. The data set contains essential socio-economic and demographic information about the respondents, as well as their built environment and behaviors commuting to work. In addition, the survey (conducted between DATE-DATE, 2016) includes information about the respondents’ feelings and emotions in relation to their commuting experience, the social experience of a variety of transportation modes, various self-assessed health questions, patterns of use of information and telecommunication technologies, and questions about sustainability and the environment. The data collection conducted a quota-sampling method based on the information from Pre-Census of 2012, and in total, 451 participants took part in the survey. This study considers the first two parts of the survey including individual characteristic and health information to figure out the relationship between personal attributes and stress related variables. 
+-The case study for this research covered the Santiago Metropolitan as Chile???s capital and largest city containing various communes as shown in the figure. 1. The dataset used in current study obtained from a paper-based survey conducted face-to-face in Santiago in 2016. The data set contains essential socio-economic and demographic information about the respondents, as well as their built environment and behaviors commuting to work. In addition, the survey (conducted between DATE-DATE, 2016) includes information about the respondents??? feelings and emotions in relation to their commuting experience, the social experience of a variety of transportation modes, various self-assessed health questions, patterns of use of information and telecommunication technologies, and questions about sustainability and the environment. The data collection conducted a quota-sampling method based on the information from Pre-Census of 2012, and in total, 451 participants took part in the survey. This study considers the first two parts of the survey including individual characteristic and health information to figure out the relationship between personal attributes and stress related variables. 
 
-```{r}
+```{r echo=FALSE, include = FALSE}
 
 # ggplot() +
 #   annotation_map_tile() +
@@ -189,7 +194,7 @@ Collect the data on the two ordinal variables of interest and check for any miss
 #   tm_symbols(size = 0.5)
 ```
 
-```{r}
+```{r echo=FALSE}
 comunas_1 <- read_sf('C:/Users/nalaeen/Desktop/Master-Research/bSantiago/data-raw/comunas_1')
 
 San_area_plot <- ggplot() +
@@ -235,10 +240,10 @@ Age sounded influential on most of aspects of driver stress vulnerability. Getti
 
 In contrast of old people, youth were more likely to reveal their driving anger through behavioral coping strategies[@hill2007driver]. 
 
-Based on findings of previous research on determinants of individual’s vulnerability to mobility stress, level of education and family status would be influential on the experienced stress while commuting. Also, high level of income would provide people with the opportunity of purchasing a private vehicle limiting their driving stress and uncomfortable experience with public means [@odufuwa2008gender].
+Based on findings of previous research on determinants of individual???s vulnerability to mobility stress, level of education and family status would be influential on the experienced stress while commuting. Also, high level of income would provide people with the opportunity of purchasing a private vehicle limiting their driving stress and uncomfortable experience with public means [@odufuwa2008gender].
 
 
-```{r summary of desctiptive statistics}
+```{r summary of desctiptive statistics, echo=FALSE, include = FALSE}
 
 # Join Santiago_H and Santiago_IC by "ID"
 df <- Santiago_H %>%
@@ -288,7 +293,7 @@ skim_HIC
 ```
 
 
-```{r Preparing dummy variables for desctiptive statistics}
+```{r Preparing dummy variables for desctiptive statistics, echo=FALSE, include = FALSE}
 
 df$Less18 <- ifelse (df$r0D_AGE == "Less18", 1, 0)
 df$"18to24" <- ifelse (df$r0D_AGE == "18to24", 1, 0)
@@ -351,7 +356,7 @@ df$"VERY IMPORTANT" <- ifelse (df$r1GA_IMPSTRESS == "VERY IMPORTANT", 1, 0)
 ```
 
 
-```{r desctiptive statistics}
+```{r desctiptive statistics, echo=FALSE, include = FALSE}
 
 df
 
@@ -515,7 +520,7 @@ tableout <- kable(example_2.df,
 
 In order to reach the more efficient model we used recode_factor() argument which requires the dplyr R package to be loaded, and the function takes the original factor variable as the first argument, followed by the recoding rules. The recoding rules in this study are specified using a set of named character vectors to aggregate or disperse the original levels of the factor and the values represent the new levels.
 
-```{r resetting the outcomes of each variable to see the efficient result}
+```{r resetting the outcomes of each variable to see the efficient result, echo=FALSE, include = FALSE}
 
 df <- Santiago_H |>
   left_join(Santiago_IC,
@@ -607,11 +612,11 @@ mutate(r0H_OCCUPATION = recode_factor(r0H_OCCUPATION,
 
 One of the most common analysis of ordinal data would be related to modeling the preferences or opinions in various fields. In this regard we can see the application of modelling in correlated ordinal data as multiple outcomes for a number of subjects or objects like participants responding to a questionnaire. Given these multivariate setting, models and particularly multivariate ordinal regression models sound practical to deal with the correlation among ordinal outcomes. Current study has used similar application of bivariate ordinal regression models [@kenne2016pairwise] considering the gap between expected satisfaction and experienced service. It refers to two different blocks that participants are asked to say to what extent the service has importance and as the second part they are required to reveal the actual feeling about the given service. 
 
-As can be seen in the study conducted by [@hirk2020mvord] the class of multivariate ordinal regression models implemented in mvord and can be applied to other applications such as having multiple or repeated ordinal observations. This research takes advantage of package mvord for R Studio which provides a flexible framework for analysing correlated ordinal data using the class of multivariate ordinal regression models. This class of modeling assumes each ordinal response as a categorized version of an underlying continuous latent variable separated based on specific threshold parameters. This flexible framework contributes helps to imposing constraint on thresholds along with regression coefficients using … arguments.  
+As can be seen in the study conducted by [@hirk2020mvord] the class of multivariate ordinal regression models implemented in mvord and can be applied to other applications such as having multiple or repeated ordinal observations. This research takes advantage of package mvord for R Studio which provides a flexible framework for analysing correlated ordinal data using the class of multivariate ordinal regression models. This class of modeling assumes each ordinal response as a categorized version of an underlying continuous latent variable separated based on specific threshold parameters. This flexible framework contributes helps to imposing constraint on thresholds along with regression coefficients using ??? arguments.  
 
 In this study we implement bivariate logit link for the class of multivariate ordinal regression models. In terms of identifiability, imposing some restriction on the parameters is needed as the absolute scale and location are not identifiable in ordinal models. Therefore, in order to make the model identifiable, we use one of the options regarding constraining parameter set by the following way:
 
-Fixing the intercept βj0 (e.g., to zero), using flexible thresholds θj and fixing σij (e.g., to unity) ∀j ∈ Ji, ∀i ∈ {1, . . . , n}.
+Fixing the intercept ??j0 (e.g., to zero), using flexible thresholds ??j and fixing ??ij (e.g., to unity) ???j ??? Ji, ???i ??? {1, . . . , n}.
 
 # Analysis and results
 
@@ -625,7 +630,7 @@ mod_bivariate <- mvord(formula = MMO2(r1A_STRESS,r1GA_IMPSTRESS) ~ 0 + r0D_AGE +
 where "mod_bivariate" is the name of the model, "mvord" is the function for fitting multivariate ordinal models, and "MMO2" is the data structure in accordance with wide format of data set. Predicators are demographic variables of the respondents namely as their age, income, education and occupation level as well as their primary mode of commute.
 
 
-```{r}
+```{r, echo=FALSE}
 library(mvord)
 mod_bivariate <- mvord(formula = MMO2(r1A_STRESS, r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  ,
                        link = mvlogit(df = 8L),
@@ -641,7 +646,7 @@ As the second step to make sure of the model identifiability and reveal the late
 
 
 
-```{r}
+```{r, echo=FALSE}
 formula <- MMO2(r1A_STRESS, r1GA_IMPSTRESS) ~ 0 + r0D_AGE + r0J_INCOME + r0P_MODE1 + r0G_EDUCATION + r0H_OCCUPATION  
 names_constraints(formula, data = df)
 coef.constraints = cbind(c(NA, 1), # Adults
@@ -684,7 +689,7 @@ Having higher level of education has been found to be associated with a positive
 
 In terms of occupation, current study has shown that experiencing stress among those who have a profession or students is significantly associated. Negative coefficient for both groups implies that their stress level has a decreasing trend compared to their counterparts. In addition, increasing trend of stress level has been indicated in some professions like construction due to different reasons like having an unsafe workplace or occupational tensions [@loosemore2004gender].
 
-```{r}
+```{r, echo=FALSE, include = FALSE}
 coef.constraints <- coef.constraints |>
   t() |>
   data.frame() |>
@@ -740,30 +745,30 @@ mod_table <- data.frame(variable = names(mod_bivariate$beta)) |>
 
 ```{r extract-estimates, include=FALSE}
 # Obtain table with statistics (thresholds)
-mod_theta <- mod_bivariate$theta$r1A_STRESS |>
-  transmute(Estimate, `Pr(>|z|)`) |>
-  rownames_to_column(var = "variable") |>
-  rename(beta = Estimate,
-         p = `Pr(>|z|)`)
-
-mod_theta <- data.frame(variable = c("VLOW|LOW",
-                                     "LOW|MODERATE",
-                                     "MODERATE|HIGH",
-                                     "HIGH|VHIGH"),
-                        e1_beta = mod_theta$beta[1:5],
-                        e1_p = mod_theta$p[1:5],
-                        e2_beta = mod_theta$beta[6:10],
-                        e2_p = mod_theta$p[6:10])
-
-# Extract coefficient estimates and p-values
-mod_beta <- mod_beta$coefficients |>
-  transmute(Estimate, `Pr(>|z|)`) |>
-  rownames_to_column(var = "variable") |>
-  rename(beta = Estimate,
-         p = `Pr(>|z|)`)
+# mod_theta <- mod_bivariate$theta$r1A_STRESS |>
+#   transmute(Estimate, `Pr(>|z|)`) |>
+#   rownames_to_column(var = "variable") |>
+#   rename(beta = Estimate,
+#          p = `Pr(>|z|)`)
+# 
+# mod_theta <- data.frame(variable = c("VLOW|LOW",
+#                                      "LOW|MODERATE",
+#                                      "MODERATE|HIGH",
+#                                      "HIGH|VHIGH"),
+#                         e1_beta = mod_theta$beta[1:5],
+#                         e1_p = mod_theta$p[1:5],
+#                         e2_beta = mod_theta$beta[6:10],
+#                         e2_p = mod_theta$p[6:10])
+# 
+# # Extract coefficient estimates and p-values
+# mod_beta <- mod_beta$coefficients |>
+#   transmute(Estimate, `Pr(>|z|)`) |>
+#   rownames_to_column(var = "variable") |>
+#   rename(beta = Estimate,
+#          p = `Pr(>|z|)`)
 ```
 
-```{r storing thresholds (outcome variables)}
+```{r storing thresholds (outcome variables), echo=FALSE, include = FALSE}
 mod_theta <- data.frame(thresholds1 = c("VLOW|LOW",
                                      "LOW|MODERATE",
                                      "MODERATE|HIGH",
@@ -781,7 +786,7 @@ mod_theta <- data.frame(thresholds1 = c("VLOW|LOW",
 
 ```
 
-```{r Calculating Z and P values for thresholds (outcome variables)}
+```{r Calculating Z and P values for thresholds (outcome variables), echo=FALSE, include = FALSE}
 z1 <- mod_theta$theta1/mod_theta$setheta1
 p1 <- (1 - pnorm(abs(z1), 0, 1)) * 2
 
@@ -789,7 +794,7 @@ z2 <- mod_theta$theta2/mod_theta$setheta2
 p2 <- (1 - pnorm(abs(z2), 0, 1)) * 2
 ```
  
-```{r storing thresholds and P values for thresholds (outcome variables)}
+```{r storing thresholds and P values for thresholds (outcome variables), echo=FALSE, include = FALSE}
 
 mod_theta <- data.frame(thresholds1 = c("VLOW|LOW",
                                      "LOW|MODERATE",
@@ -812,7 +817,7 @@ mod_theta <- data.frame(thresholds1 = c("VLOW|LOW",
 ```
 
 
-```{r Storing coefficients for exploratory variables}
+```{r Storing coefficients for exploratory variables, echo=FALSE, include = FALSE}
 (mod_beta <- coef(summary(mod_bivariate)))
 
 
@@ -827,7 +832,7 @@ rownames(mod_beta) <- new_row_names
 print(mod_beta)
 ```
 
-```{r Calculating Z and P values for exploratory variables}
+```{r Calculating Z and P values for exploratory variables, echo=FALSE, include = FALSE}
 
 # data_ <- as.data.frame(t(mod_bivariate))
 # mod_bivariate[["beta"]][["r0D_AGEAdults 1"]]
@@ -875,7 +880,7 @@ p_Higher_Education <- (1 - pnorm(abs(z_Higher_Education), 0, 1)) * 2
 ```
 
 
-```{r storing estimates and P values for exploratory variables}
+```{r storing estimates and P values for exploratory variables, echo=FALSE, include = FALSE}
 mod_beta <- data.frame(Equation1 = c(NA,
                                       "r0D_AGESeniors 1",
                                "r0J_INCOMEMiddle Income 1",
@@ -983,29 +988,29 @@ mod_beta <- data.frame(Equation1 = c(NA,
 
 ```{r assemble-table-with-results, include=FALSE}
 # Join the coefficient estimates and p-values to the table
-mod_table <- mod_table |>
-  # Estimates of equation 1
-  left_join(mod_beta,
-            by = c("e1_var" = "variable")) |>
-  rename(e1_beta = beta) |>
-  # Estimates of equation 2
-  left_join(mod_beta,
-            by = c("e2_var" = "variable")) |>
-  rename(e2_beta = beta) |>
-  # p-values of equation 1
-  left_join(mod_beta,
-            by = c("e1_var" = "variable")) |>
-  rename(e1_p = p) |>
-  # p-values of equation 2
-  left_join(mod_beta,
-            by = c("e2_var" = "variable")) |>
-  rename(e2_p = p) |>
-  # Select columns for table
-  dplyr::select(variable,
-                e1_beta,
-                e1_p,
-                e2_beta,
-                e2_p)
+# mod_table <- mod_table |>
+#   # Estimates of equation 1
+#   left_join(mod_beta,
+#             by = c("e1_var" = "variable")) |>
+#   rename(e1_beta = beta) |>
+#   # Estimates of equation 2
+#   left_join(mod_beta,
+#             by = c("e2_var" = "variable")) |>
+#   rename(e2_beta = beta) |>
+#   # p-values of equation 1
+#   left_join(mod_beta,
+#             by = c("e1_var" = "variable")) |>
+#   rename(e1_p = p) |>
+#   # p-values of equation 2
+#   left_join(mod_beta,
+#             by = c("e2_var" = "variable")) |>
+#   rename(e2_p = p) |>
+#   # Select columns for table
+#   dplyr::select(variable,
+#                 e1_beta,
+#                 e1_p,
+#                 e2_beta,
+#                 e2_p)
 ```
 
 
@@ -1023,25 +1028,25 @@ mod_table1 <- rbind(mod_beta, mod_theta)
 ```
 
 
-```{r model-results, echo=FALSE}
-mod_table1 |>  
-  mutate(across(.cols = ends_with("beta"),
-                ~ ifelse(is.na(.),
-                         "-",
-                         paste(round(., 4)))),
-         across(.cols = ends_with("p"),
-                ~ ifelse(is.na(.),
-                         "-",
-                         ifelse(. >= 0.0001,
-                                paste(round(., 4)),
-                                "<0.0001")))) |>
-  kable("latex",
-        booktabs = T,
-        col.names = c("Variable", "Estimate", "p-value", "Estimate", "p-value"),
-        align = c("l", "c", "c", "c", "c"),
-        caption = "\\label{tab:model-results}Bivariate ordered model results: walking frequency before and during COVID-19") |>
-  kable_styling(font_size = 8,
-                latex_options = c("striped")) #|>
+```{r model-results, echo=FALSE, include = FALSE}
+# mod_table1 |>  
+#   mutate(across(.cols = ends_with("beta"),
+#                 ~ ifelse(is.na(.),
+#                          "-",
+#                          paste(round(., 4)))),
+#          across(.cols = ends_with("p"),
+#                 ~ ifelse(is.na(.),
+#                          "-",
+#                          ifelse(. >= 0.0001,
+#                                 paste(round(., 4)),
+#                                 "<0.0001")))) |>
+#   kable("latex",
+#         booktabs = T,
+#         col.names = c("Variable", "Estimate", "p-value", "Estimate", "p-value"),
+#         align = c("l", "c", "c", "c", "c"),
+#         caption = "\\label{tab:model-results}Bivariate ordered model results: walking frequency before and during COVID-19") |>
+#   kable_styling(font_size = 8,
+#                 latex_options = c("striped")) #|>
 # pack_rows(group_label = "Socio-economic and demographic variables",
 #           start_row = 1,
 #           end_row = 6) |>
@@ -1056,7 +1061,7 @@ mod_table1 |>
 #          end_row = 31)
 ```
 
-```{r displaying the result}
+```{r displaying the result, echo=FALSE}
 
 library(knitr)
 library(kableExtra)
@@ -1145,7 +1150,7 @@ Regarding analysis during our bivariate ordinal mode, we reclassified different 
 As can be seen in the bar chart, respondent mostly use public means of transportation with almost 285 out of 451 respondents as their main choice for commuting. Recent studies also have shown that using public transport has formed almost 50% of motorized trips as a salient example of the popularity of public transportation in Santiago, Chile over the recent years [@pezoa2023estimation]. Regarding this popularity and to make it more productive, it has been mentioned that public transport in Santiago as a modern and integrated system is called Transantiago referring to a sustainable public transport system for Santiago. By aggregating services such as bus and metro and keeping the fare expenses with a low range, passengers can benefit from an efficient system of transport which was unsuccessful [@munoz2008transantiago] and needs some consideration to work as planners expected.
 Following this, second popular mode of transportation can be assigned to private mode with around 25% of the whole population or 120 persons. Some users also were interested in eco-friendly modes like walking and cycling with slightly more than 40 people and 10 % of the whole respondents.
 
-```{r Modes of transport}
+```{r Modes of transport, echo=FALSE}
 
 
 ggplot(df, aes(x=as.factor(r0P_MODE1), fill=as.factor(r0P_MODE1) )) + 
@@ -1158,7 +1163,7 @@ ggplot(df, aes(x=as.factor(r0P_MODE1), fill=as.factor(r0P_MODE1) )) +
 
 To have a better understanding of the interaction among the key variables of modes of transportation, age groups, income levels, experienced levels of stress and the importance assigned to the stress, some mosaic plots were adopted. 
 
-```{r}
+```{r, echo=FALSE, include = FALSE}
 req <- substitute(require(x, character.only = TRUE))
 libs<-c("sjPlot")
 sapply(libs, function(x) eval(req) || {install.packages(x); eval(req)})
@@ -1169,7 +1174,7 @@ So we are analyzing these items in terms of their effect on each other.
 
 
 
-```{r display level of Experienced Stress by the importance of stress}
+```{r display level of Experienced Stress by the importance of stress, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r1A_STRESS, var.col = df$r1GA_IMPSTRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1179,7 +1184,7 @@ Generally, at lower levels it has been mostly less important for people and the 
 
 Results can be visible also using the following mosaic plot.
  
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r1GA_IMPSTRESS, r1A_STRESS), fill=r1GA_IMPSTRESS)) + 
   labs(title = "Importance of Stress by Experienced stress level")
@@ -1187,7 +1192,7 @@ ggplot(data = df) +
 ```
 
 
-```{r display level of Experienced Stress by transportation modes}
+```{r display level of Experienced Stress by transportation modes, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0P_MODE1, var.col = df$r1A_STRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1196,7 +1201,7 @@ According to the cross tabulation of modes of transport by feeling of stress, al
 So as a whole fact private and public transports users felt  relatively higher levels of stress compared to their active mode counter parts.Also these groups incorporate almost 90% of the whole respondents . 
 
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r0P_MODE1, r1A_STRESS), fill=r0P_MODE1)) + 
   labs(title = "Transportation Mode by Experienced Stress")
@@ -1205,7 +1210,7 @@ ggplot(data = df) +
 
 
 
-```{r display level of importance of stress by transportation modes }
+```{r display level of importance of stress by transportation modes, echo=FALSE }
 sjPlot::tab_xtab(var.row = df$r0P_MODE1, var.col = df$r1GA_IMPSTRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1216,7 +1221,7 @@ Totally it is important or very important for the users of all modes of transpor
 
 
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r0P_MODE1, r1GA_IMPSTRESS), fill=r0P_MODE1)) + 
   labs(title = "Transportation Mode by Importance of Stress")
@@ -1225,7 +1230,7 @@ ggplot(data = df) +
 
 
 
-```{r display level of importance of stress by Income level }
+```{r display level of importance of stress by Income level, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0J_INCOME, var.col = df$r1GA_IMPSTRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1234,7 +1239,7 @@ Based on the cross tabulation of importance of stress by income level, it can be
 It is interesting to note that a large number of respondents in all income groups assigned important and very important level to experienced stress during trips.
  
 
-```{r}
+```{r,echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r1GA_IMPSTRESS, r0J_INCOME), fill=r1GA_IMPSTRESS)) + 
   labs(title = "Importance of Stress by Income level")
@@ -1242,7 +1247,7 @@ ggplot(data = df) +
 ```
 
 
-```{r display level of Experienced Stress by Income level }
+```{r display level of Experienced Stress by Income level, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0J_INCOME, var.col = df$r1A_STRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1252,7 +1257,7 @@ Totally the larger part of population including middle and high income felt less
  
 
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r1A_STRESS, r0J_INCOME), fill=r1A_STRESS)) + 
   labs(title = "Experienced stress level by Income level")
@@ -1260,12 +1265,13 @@ ggplot(data = df) +
 ```
 
 
-```{r display level of Mode by Income level }
+```{r display level of Mode by Income level, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0J_INCOME, var.col = df$r0P_MODE1, title = "Table Title", show.row.prc = TRUE)
 ```
 
-According to cross tabulation of mode choice by income level, almost 80% of lower level income people and 65% of middle income levels use public transport which has been indicated to be stressful. High income respondents where interested in using public and private in a relatively similar way with about 40% and 50% respectively.  
-```{r}
+According to cross tabulation of mode choice by income level, almost 80% of lower level income people and 65% of middle income levels use public transport which has been indicated to be stressful. High income respondents where interested in using public and private in a relatively similar way with about 40% and 50% respectively. 
+
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r0P_MODE1, r0J_INCOME), fill=r0P_MODE1)) + 
   labs(title = "Mode by Income level")
@@ -1274,7 +1280,7 @@ ggplot(data = df) +
 
 
 
-```{r display level of Importance of Stress by Age groups }
+```{r display level of Importance of Stress by Age groups, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0D_AGE, var.col = df$r1GA_IMPSTRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1283,14 +1289,14 @@ As can be seen in the cross-tabulation of the importance of stress by age groups
 In general the given importance range by each age group were almost the same but adults went drastically up to the highest number of people who assigned very important level to the commuting stress.
 
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r1GA_IMPSTRESS, r0D_AGE), fill=r1GA_IMPSTRESS)) + 
   labs(title = "Importance of Stress by Age Group")
 
 ```
 
-```{r display level of Experienced stress by Age groups}
+```{r display level of Experienced stress by Age groups, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0D_AGE, var.col = df$r1A_STRESS, title = "Table Title", show.row.prc = TRUE)
 ```
 
@@ -1298,7 +1304,7 @@ According to the cross tabulation of experiencing stress by age groups, it can b
 
 Totally adults and youth experienced higher levels of stress than their Senior counterparts.
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r1A_STRESS, r0D_AGE), fill=r1A_STRESS)) + 
   labs(title = "Experienced stress level by Age Group")
@@ -1307,16 +1313,16 @@ ggplot(data = df) +
 
 
 
-```{r display Age groupd by transportation modes}
+```{r display Age groupd by transportation modes, echo=FALSE}
 sjPlot::tab_xtab(var.row = df$r0P_MODE1, var.col = df$r0D_AGE, title = "Table Title", show.row.prc = TRUE)
 ```
 
-It can be seen from the cross tabulation of modes of transport by age groups that youth as the most populated age group were interested in using active and more public transport with more than 60% each. Following this, adults as the second most populated age group were also interested in using more private and afterwards active mode with almost half of them and 23%, respectively. Apart from this, seniors were mostly interested in private transport with around 15 % and less tend to use active and public with about 10 % for each of them.
+It can be seen from the cross tabulation of modes of transport by age groups that youth as the most populated age group were interested in using active and more public transport with more than 60% of each. Following this, adults as the second most populated age group were also interested in using more private and afterwards active mode with almost half of private mode users and 23% of active mode users, respectively. Apart from this, seniors were mostly interested in private transport with around 15 % of whole private users and less tend to use active and public with about 10 % for each of them.
 
-So youth respondents tend to use public and active mode, adults are more interested in private  and active, and seniors use almost all modes in a similar way.
+So youth respondents tend to use public and active mode, adults are more interested in private  and active, and seniors use almost all modes in a similar way but more interested in private mode.
 
 
-```{r}
+```{r, echo=FALSE}
 ggplot(data = df) +
   geom_mosaic(aes(x = product(r0D_AGE, r0P_MODE1), fill=r0D_AGE)) + 
   labs(title = "Transportation Mode by Age group")
@@ -1327,29 +1333,7 @@ ggplot(data = df) +
 
 
 
-
-```{r}
-
-library(pollster)
-library(dplyr)
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
-library(knitr)
-library(ggplot2)
-library(janitor)
-library(gt)
-```
-
-
-
-
-```{r counts for mode}
+```{r counts for mode, echo=FALSE}
 df %>%
   # # filter for recent years & limited ages
   # filter(year > 2009,
@@ -1365,7 +1349,7 @@ df %>%
 
 
 
-```{r percentages for mode}
+```{r percentages for mode, echo=FALSE}
 library(dplyr)
 library(expss)
 
@@ -1385,8 +1369,10 @@ df %>%
 
 ```
 
-For each mode we can say what we see about the feeling of stress and the importance of stress
-```{r}
+
+
+
+```{r, echo=FALSE}
 
 df|>
   filter(!is.na(r1A_STRESS), !is.na(r1GA_IMPSTRESS), !is.na(r0P_MODE1)) |>
@@ -1399,37 +1385,13 @@ df|>
        x = "Importance of Stress", y = "Stress Level") 
 
 ```
-Figure (number) shows that while active users as the least populated mode of transport, felt mostly low levels of commuting stress, they assigned high importance to that. To be more in details, more than 60% of those who feel very low and low level of stress, give the highest level of importance to that. Following this an almost opposite trend can be seen for private and public users that when they feel high and very high levels of stress, that sounds so crucial to them to assign highest level of importance to their stress feeling. According to the table (number) almost more than 70 % of public and private users who felt high and very high level of stress, mentioned that was important to them. Similarly, assigning importance by the rest of these people who felt stress in lower levels slopes to more medium and low levels as the stress level is going to decrease. 
+Figure (number) shows that while active users as the least populated mode of transport, felt mostly low levels of commuting stress, they assigned high importance to that and among all, active users had the highest rate of importance. To be more in details, more than 60% of those who feel very low and low level of stress, give the highest level of importance to that. Following this an almost opposite trend can be seen for private and public users that when they feel high and very high levels of stress, that sounds so crucial to them to assign highest level of importance to their stress feeling. According to the table (number) almost more than 70 % of public and private users who felt high and very high level of stress, mentioned that was important to them. Similarly, assigning importance by the rest of these people who felt stress in lower levels slopes to more medium and low levels as the stress level is going to decrease. 
 
-It is also an interesting fact that although all users have assigned high levels of importance to the stress, private and public transports users felt relatively higher levels of stress compared to their active mode counter parts. Also these public and private groups incorporate almost 90% of the whole respondents.
-
-
-
-برای این قسمت نمودار ها باید فقط تفسیر کنی ک چی شده و چی نشون میده و possible explanation بیاری
-
-
-```{r}
-
-library(dplyr)
-library(ggplot2)
-library(ggmosaic)
-
-# Filter data
-filtered_df <- df %>%
-  filter(!is.na(r1A_STRESS), !is.na(r1GA_IMPSTRESS), !is.na(r0P_MODE1))
-
-# Create a conditional mosaic plot with facets for each mode
-ggplot(filtered_df, aes(x = product(r1A_STRESS, r1GA_IMPSTRESS), fill = r1A_STRESS)) +
-  geom_mosaic() +
-  theme(axis.text = element_text(angle = 90, size = 5)) +
-  facet_wrap(~ r0P_MODE1, ncol = 1)
-
-```
+It is also an interesting fact that although all users have assigned high levels of importance to the stress, private and public transports users felt relatively higher levels of stress compared to their active mode counter parts. Also, these public and private groups incorporate almost 90% of the whole respondents.
 
 
 
-
-```{r counts for income}
+```{r counts for income, echo=FALSE}
 df %>%
   # # filter for recent years & limited ages
   # filter(year > 2009,
@@ -1443,7 +1405,7 @@ df %>%
 ```
 
 
-```{r percentages for income}
+```{r percentages for income, echo=FALSE}
 library(dplyr)
 library(expss)
 
@@ -1464,7 +1426,7 @@ df %>%
 ```
 
 
-```{r stress, importance of stress, and income}
+```{r stress, importance of stress, and income, echo=FALSE}
 df|>
   filter(!is.na(r1A_STRESS), !is.na(r1GA_IMPSTRESS), !is.na(r0J_INCOME)) |>
   ggplot() +
@@ -1476,11 +1438,11 @@ df|>
        x = "Importance of Stress", y = "Stress Level") 
 ```
 
-Figure (number) indicates that people in all of the income groups have assigned high levels of importance to stress when commuting. This trend has been indicated from the table (number) that 80 % of all groups have assigned important and very important levels on feeling stress when commuting. Moreover, the most highest rate of giving high level of importance is associated with middle income group at all feeling stress levels as the most populated group (almost 33% of the whole respondents). It is also interesting that among all of the income groups, low income users felt highest level of feeling stress over all of the importance stages [It's important and they feel stress but still using the same mode.why?]. On the contrary, a huge number of people belong to middle level of income (almost 60 %) felt low and moderate levels of experiencing stress and less than 20 % of them felt high and very high levels of stress of commuting. This can be considered in a similar way for high income level people as well because the largest part of people felt a range of low to high level of stress with almost similar percentages to Middle group. 
+Figure (number) indicates that people in all of the income groups have assigned high levels of importance to stress when commuting. This trend has been indicated from the table (number) that 80 % of all groups have assigned important and very important levels on feeling stress when commuting. Moreover, the highest rate of giving high level of importance is associated with middle income group at all feeling stress levels as the most populated group (almost 33% of the whole respondents). It is also interesting that among all of the income groups, low income users felt highest level of feeling stress over all of the importance stages [It's important and they feel stress but still using the same mode.why?]. On the contrary, a huge number of people belong to middle level of income (almost 60 % of the middle group) felt low and moderate levels of experiencing stress and less than 20 % of them felt high and very high levels of stress of commuting. This can be considered in a similar way for high income level people as well because the largest part of people felt a range of low to high level of stress with almost similar percentages to Middle group. 
 
 Generally, while almost all people considered high levels of importance about stress, the larger portion of them including middle and high income felt less challenging ranges of stress in comparison to low income levels.
 
-```{r counts for age}
+```{r counts for age, echo=FALSE}
 df %>%
   # # filter for recent years & limited ages
   # filter(year > 2009,
@@ -1494,7 +1456,7 @@ df %>%
 ```
 
 
-```{r percentages for age}
+```{r percentages for age, echo=FALSE}
 library(dplyr)
 library(expss)
 
@@ -1515,7 +1477,7 @@ df %>%
 ```
 
 
-```{r stress, importance of stress, and age}
+```{r stress, importance of stress, and age, echo=FALSE}
 df|>
   filter(!is.na(r1A_STRESS), !is.na(r1GA_IMPSTRESS), !is.na(r0D_AGE)) |>
   ggplot() +
@@ -1526,70 +1488,63 @@ df|>
        subtitle = "Faceted by Age groups",
        x = "Importance of Stress", y = "Stress Level") 
 ```
-Table (number) reveals youth and adults as the most populated groups incorporate 60% and 30% of whole respondents. A common trend among all groups is that around 30% of them felt moderate stress level and seniors had the largest portion of feeling stress at a very high level compared to other users.About youth and adults as the larger portion of respondents there is a kind of similar dispersion of feeling stress ranges from low to high level with about more than 70% of people in both age group For the importance of stress, while almost all groups felt high level of stress, the importance of stress was far more important for adults and seniors and youth assigned mostly very high level of importance but slightly less than adults. 
-
-Totally senior experienced higher levels of stress than their adults and youth counterparts but it was more important for adults to consider high level of importance to that.
-
-
-
-1-Experienced stress and importance of stress = higher levels
-Generally, at lower levels it has been less important for people and the higher levels of stress, the more importance that people assign.
-
-                          
-                                       
-2-1-Experienced stress and mode = private and public
-So as a whole fact private and public transports cause relatively higher levels of stress compared to active mode. 
-
-public and private = higher stress = higher importance
-
-2-2-Importance of stress and mode = for all
-Totally it is important or very important for the users of all modes of transport to mention their stress level and anxiety feelings while commuting.
+Table (number) reveals youth and adults as the most populated groups incorporate 60% and 30% of whole respondents. A common trend among all groups is that around 30% of them felt moderate stress level and seniors had the largest portion of feeling stress at a very high level compared to other users. About youth and adults as the larger portion of respondents there is a kind of similar dispersion of feeling stress ranges from low to high level with about more than 70% of people in both age group For the importance of stress, while almost all groups felt high level of stress, the importance of stress was far more important for adults ,and seniors and youth assigned mostly very high level of importance but slightly less than adults. 
 
 
 
 
 
-3-1-Importance of stress and income = for all
-It is interesting to note that a large number of respondents in all income groups assigned important and very important level to experienced stress during trips
-
-
-3-2-Experienced stress and income = low income relatively higher stress experience
-Totally the larger part of population including middle and high income felt less challenging ranges of stress in comparison to low income levels.
-
-
-
-3-3-Mode and income
-
-Low income and middle income using more public. High income use both private and public with relatively similar share
-
-
-
-
-4-1-Importance of stress and age = adults
-In general, the given importance range by each age group were almost the same but adults went drastically up to the highest number of people who assigned very important level to the commuting stress.
-
-
-4-2-Experienced stress and age = adults and youth
-Totally adults and youth experienced higher levels of stress than their Senior counterparts.
+```{r Income, mode, and Age, echo=FALSE}
+df|>
+  filter(!is.na(r0D_AGE), !is.na(r0P_MODE1), !is.na(r0J_INCOME)) |>
+  ggplot() +
+  geom_mosaic(aes(x = product(r0D_AGE, r0J_INCOME), fill = r0D_AGE)) +
+  theme(axis.text = element_text(angle = 90, size = 5)) +
+  facet_wrap(~r0P_MODE1)+
+  labs(title = "Conditional Mosaic Plot of Mode and Age",
+       subtitle = "Faceted by Mode of transport",
+       x = "Income level", y = "Age group") 
+```
+As the graph reveals youth people as a notable portion of respondents with a slight difference are mostly high income and middle income. Previously it has been indicated that they are mostly public transport users who feel the highest feeling of stress and their second most interesting mode is active. Adults and the least populated group, seniors are mostly low income and based on findings they more rely on private transport. 
 
 
 
+```{r Income, mode, and stress, echo=FALSE}
+df|>
+  filter(!is.na(r1A_STRESS), !is.na(r0P_MODE1), !is.na(r0J_INCOME)) |>
+  ggplot() +
+  geom_mosaic(aes(x = product(r1A_STRESS, r0J_INCOME), fill = r1A_STRESS)) +
+  theme(axis.text = element_text(angle = 90, size = 5)) +
+  facet_wrap(~r0P_MODE1)+
+  labs(title = "Conditional Mosaic Plot of Stress and Income",
+       subtitle = "Faceted by Mode of transport",
+       x = "Income level", y = "Stress Level") 
+```
+As it has been revealed, almost 80% of lower level income people and 65% of middle income level as the most populated group use public transport which has been indicated to be highly stressful especially among low income ones. High income respondents where the most interested group in using private mode with 40 % of them and relatively less commuting stress but they highly rely on public mode with about 50% among all . 
 
-5-1-Age and mode = 
-So , youth respondents tend to use public and active mode, adults tend to use private then active and public with similar shares. And seniors interested mostly in using all three modes with similar shares.
-
-
-In general those adults who use public transport and belong to low-income level are the most group at the exposure of feeling stress while they mention it is also very important to them.
 
 # Conclusion
 
 This research has been conducted to investigate effect of commuting stress on choosing mode of active and motorized means of transportation and the corresponding coping strategies. Recently, there has been increased attention in how these consequences are felt by travelers who utilize various modes of transportation, particularly active ones.
 
-Measuring stress entails an individual self-evaluation of several variables when travelling – preferably while commuting. There is a link between stress and commuting in the literature, which takes into account factors such as commute time [@evans2006rail], control and predictability [@gottholmseder2009stress], as already has been found. The component of stress level has a negative connotation in the context of this research (as no one would prefer to be stressed) and investigates the internal mental condition of the person who travels – based on her commuting journeys. 
+Measuring stress entails an individual self-evaluation of several variables when travelling ??? preferably while commuting. There is a link between stress and commuting in the literature, which takes into account factors such as commute time [@evans2006rail], control and predictability [@gottholmseder2009stress], as already has been found. The component of stress level has a negative connotation in the context of this research (as no one would prefer to be stressed) and investigates the internal mental condition of the person who travels ??? based on her commuting journeys. 
 
 In this research we aimed at adding psychological repercussions on travelers by investigating stress levels among users of active and motorized modes of transportation in this research. Furthermore, we look into the significance that travelers place on their stress levels. This allows us to investigate the concept of "limited horizons," or how those who are less adaptable normalize subpar experiences. The current study on commuting stress addressed the following questions: 
 -How crucial is it for respondents  to make a journey while feeling a sense of stress and to what scale they are going to evaluate this feeling?
 -What elements go into determining how stressed active and motorized travelers are when traveling?
 -Can commuters think of normalization and learned helplessness as coping mechanisms? If yes, which category of people.
+
+In order to find out the how people feel stress while commuting, the association between some key exploratory variables and our income variables has been assessed. The study found that while public users assume least importance level, they feel highest level of stress. When we consider a three-way association among active, public and private users, we can see first public and then private users as the more populated groups feel more stress and do not care as much as active users. This result are in the same page with previous work as [@brutus2017cycling] found those who cycled to work felt less stress than others who commute by motorized modes. 
+
+Results also have shown that although public transport is the most popular mode, those who use public transport are mostly low income. These findings echoes results from [@tiznado2021public] where they found in Latin America due to some deficiencies of land use planning and transport category of low-income people suffer from long commute between work and home. Because of their status and not having high chance of car ownership, they become captive users of public transport as the fundamental mode of transport.As been previously indicated, low income people, the least populated group are the most group at the exposure of feeling stress  because they are the most interested users of public transport and they do not care about the feeling of stress as much as high and middle income groups. As [@gatersleben2007affective] also supported previous studies people reported more stressful journeys by car and public transit than active mode due to different sources mainly delays because of traffic jams, behavior of other (car) users, poor infrastructure provision (for public users).
+
+It could be also interesting that the least popular mode is active which also has been mostly used by low income people who are the most careful people about the importance of stress and have undergone the least stress.
+One of the reasons behind this fact that active mode has not been used as the most popular in Chile according to [@herrmann2020persistence] is the lack of physical safety infrastructure ("walkability" of the sidewalks). Furthermore, lack of safety in Chile leading to sexual harassment especially for women make them avoid walking and using public transport and stick to taxi even among those with low budget. 
+
+As expected in Chile as a developing global south country, while high income cluster are the more interested in using public transport, they can be considered as the most users of private modes of transport. These people are the second most affected group by feeling commuting stress and population  after low income people.
+Findings have shown that although seniors as the least populated group feel highest rate of stress on their trips mostly by private means, they consider least possible importance to what they undergo. The second stress affected group is associated with adults who are the most careful people about feeling stress. Youth as the most populated category have reported lowest commuting stress and were the second careful people about that feeling. According to the results, although youth respondents are the most high and middle income level people, they are the most interested people in using public transport leading to highest rate of stress. Adults as the second populated cluster after youth can be classified mostly as low income, are the most interested people in using private and active mode. Seniors, the least populated class can be categorized mostly as low income people but their most probable mode of transport is private. 
+
+
+
 
 <!-- study limitations -->

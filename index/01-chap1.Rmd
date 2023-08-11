@@ -103,7 +103,7 @@ The data package described in this paper contains 9 data objects in tabular form
 
 : List of tables in data package {#tbl-list-of-tables}
 
-The theme of table `Santiago_IC` is the individual characteristics of respondents and includes several essential socio-economic and demographic attributes. @tbl-individual-characteristics-descriptives) presents a summary of these variables, including information about the neighborhood of residence of respondents. All respondents were successfully geolocated to the level of Communes (large administrative partitions equivalent to municipalities) and Macro Zones (larger aggregations of communes used for descriptive purposes). The street address information is less complete. The place of work (geocoded at the level of Communes) is missing only in a small number of cases (complete rate 0.96) and few respondents report a _second_ place of work/studies where they travel (`r01_WORK_COM_2`).
+The theme of table `Santiago_IC` is the individual characteristics of respondents and includes several essential socio-economic and demographic attributes. [`Summary-individual-characteristics`] presents a summary of these variables, including information about the neighborhood of residence of respondents. All respondents were successfully geolocated to the level of Communes (large administrative partitions equivalent to municipalities) and Macro Zones (larger aggregations of communes used for descriptive purposes). The street address information is less complete. The place of work (geocoded at the level of Communes) is missing only in a small number of cases (complete rate 0.96) and few respondents report a _second_ place of work/studies where they travel (`r01_WORK_COM_2`).
 
 As seen in the table, most respondents' information is quite complete. Only 16 respondents reported facing some disability, and of these only 11 completed the section asking them about the type (`r0O_TYPE_DIS`). In terms of gender, the sample includes approximately 15.7\% more women than men. 
 
@@ -117,10 +117,10 @@ These variables provide insights about different segments of the population. In 
 
 <!-- there should be a more specified classification than in urban, semi-rural and rural areas regarding different transportation options that they might have[@bergstad2011affective]. Also this part would be advantageous for business developments to figure out marketing and apply strategies for future patterns based on consumer demands.-->
 
-```{r Summary-individual-characteristics}
+```{r,  Summary-individual-characteristics, echo=FALSE, label: tbl-individual-characteristics-descriptives}
 #| tbl-cap: Variables regarding individual characteristics of respondents
 #| tbl-cap-location: top
-#| label: tbl-individual-characteristics-descriptives
+# label: tbl-individual-characteristics-descriptives
 #| echo: false
 
 #skim(Santiago_IC)
